@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import MainAppointment from "./components/Appointment/MainAppointment/MainAppointment";
 import MainBlog from "./components/Blogs/MainBlog/MainBlog";
 
 import MainHome from './components/Home/MainHome/MainHome';
@@ -15,7 +16,8 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path='/'>
-            <MainBlog></MainBlog>
+            {/* <MainBlog></MainBlog> */}
+            <MainAppointment />
           </Route>
           <Route path='blog'>
             <MainBlog></MainBlog>
