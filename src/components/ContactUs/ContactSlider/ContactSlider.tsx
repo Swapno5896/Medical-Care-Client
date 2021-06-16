@@ -1,11 +1,11 @@
 import React from 'react';
 
-const MainContact = () => {
+const ContactSlider = () => {
     return (
         <div>
-            
+
         </div>
     );
 };
 
-export default MainContact;
+export default ContactSlider;
