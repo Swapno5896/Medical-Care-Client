@@ -1,6 +1,6 @@
 import React from 'react';
 import img1 from '../../../images/c-1.jpg'
-const DetainBlog = () => {
+const DetailBlog = () => {
     return (
         <div>
             <img src={img1} className="img-fluid" alt="..."></img>
@@ -10,4 +10,4 @@ const DetainBlog = () => {
     );
 };
 
-export default DetainBlog;
+export default DetailBlog;

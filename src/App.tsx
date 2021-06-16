@@ -1,21 +1,28 @@
-import React from 'react';
-import Header from './components/Home/Header/Header';
-import TopBanner from './components/Home/TopBanner/TopBanner';
-import SmallDetail from './components/Home/SmallDetail/SmallDetail';
-import Doctors from './components/Home/Doctors/Doctors';
-import Booking from './components/Home/Booking/Booking';
-import Articles from './components/Home/Articles/Articles';
-import Footer from './components/Home/Footer/Footer';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import MainBlog from "./components/Blogs/MainBlog/MainBlog";
+
+import MainHome from './components/Home/MainHome/MainHome';
+
 const App = () => {
   return (
     <div>
-      <Header />
-      <TopBanner />
-      <SmallDetail />
-      <Doctors />
-      <Booking />
-      <Articles />
-      <Footer></Footer>
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <MainBlog></MainBlog>
+          </Route>
+          <Route path='blog'>
+            <MainBlog></MainBlog>
+          </Route>
+        </Switch>
+      </Router>
+
     </div>
   );
 };
