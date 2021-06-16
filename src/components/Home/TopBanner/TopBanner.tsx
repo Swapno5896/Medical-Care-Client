@@ -1,11 +1,16 @@
 import React from 'react';
+import './TopBanner.scss'
 import img1 from '../../../images/c-1.jpg'
 import img2 from '../../../images/c-2.png'
 import img3 from '../../../images/c-3.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+
 const TopBanner = () => {
     return (
         <div>
-            <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div id="carouselExampleDark" className="top-banner-carosel carousel carousel-dark slide" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -13,24 +18,48 @@ const TopBanner = () => {
                 </div>
                 <div className="carousel-inner">
                     <div className="carousel-item active" data-bs-interval="10000">
-                        <img src={img1} className="d-block w-100" alt="..." />
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <h1>Provide best <br /> medical care</h1>
+                                <p>The health and well-being of our patients and their health care team will
+                                    always be our priority, so we follow the best practices for cleanliness.</p>
+                            </div>
+                            <div className="col-md-6">
+                                <img src={img1} className="d-block w-100" alt="..." />
+                            </div>
                         </div>
+
+
                     </div>
                     <div className="carousel-item" data-bs-interval="2000">
-                        <img src={img2} className="d-block w-100" alt="..." />
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <h1>Provide best <br /> medical care</h1>
+                                <p>The health and well-being of our patients and their health care team will
+                                    always be our priority, so we follow the best practices for cleanliness.</p>
+                                <div className='top-banner-icons'>
+                                    <p> <span><FontAwesomeIcon icon={faCoffee} /></span> Examination</p>
+                                    <p><span><FontAwesomeIcon icon={faCoffee} /></span>Prescription</p>
+                                    <p><span><FontAwesomeIcon icon={faCoffee} /></span>Cardiogram</p>
+                                    <p><span><FontAwesomeIcon icon={faCoffee} /></span>Blood Pressure</p>
+
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <img src={img1} className="d-block w-100" alt="..." />
+                            </div>
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src={img3} className="d-block w-100" alt="..." />
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <h1>Provide best <br /> medical care</h1>
+                                <p>The health and well-being of our patients and their health care team will
+                                    always be our priority, so we follow the best practices for cleanliness.</p>
+                            </div>
+                            <div className="col-md-6">
+                                <img src={img1} className="d-block w-100" alt="..." />
+                            </div>
                         </div>
                     </div>
                 </div>
