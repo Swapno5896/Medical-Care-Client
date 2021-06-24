@@ -1,5 +1,5 @@
 import React from "react";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const Header = () => {
   return (
     <div>
@@ -20,26 +20,26 @@ const Header = () => {
             <a class="navbar-brand" href="#">
               Hidden brand
             </a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <Link className="nav-link" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Link
-                </a>
+                <Link className="nav-link" to="/blog">
+                  Blog
+                </Link>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
-                >
-                  Disabled
-                </a>
+                <Link className="nav-link" to="/contact">
+                  Contact
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link className="nav-link" to="/appoinment">
+                  Appoinment
+                </Link>
               </li>
             </ul>
             <form class="d-flex">

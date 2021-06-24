@@ -5,18 +5,16 @@ import SmallDetail from "./../SmallDetail/SmallDetail";
 import Doctors from "./../Doctors/Doctors";
 import Booking from "./../Booking/Booking";
 import Articles from "./../Articles/Articles";
-import Footer from "./../Footer/Footer";
 
 const MainHome = () => {
   return (
     <div>
-      <Header />
-      {/* <TopBanner /> */}
+      {/* <Header /> */}
+      {/* <TopBanner />  */}
       <SmallDetail />
       <Doctors />
       <Booking />
       <Articles />
-      <Footer />
     </div>
   );
 };
