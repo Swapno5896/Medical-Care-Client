@@ -21,28 +21,28 @@ const Header = () => {
               Hidden brand
             </a>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <li class="nav-item pe-4">
                 <Link className="nav-link" to="/">
                   Home
                 </Link>
               </li>
-              <li class="nav-item">
+              <li class="nav-item pe-4">
                 <Link className="nav-link" to="/blog">
                   Blog
                 </Link>
               </li>
-              <li class="nav-item">
+              <li class="nav-item pe-4">
                 <Link className="nav-link" to="/contact">
                   Contact
                 </Link>
               </li>
-              <li class="nav-item">
+              <li class="nav-item pe-4">
                 <Link className="nav-link" to="/appoinment">
                   Appoinment
                 </Link>
               </li>
             </ul>
-            <form class="d-flex">
+            {/* <form class="d-flex">
               <input
                 class="form-control me-2"
                 type="search"
@@ -52,7 +52,7 @@ const Header = () => {
               <button class="btn btn-outline-success" type="submit">
                 Search
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </nav>

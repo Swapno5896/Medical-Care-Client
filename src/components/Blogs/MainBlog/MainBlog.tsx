@@ -20,8 +20,8 @@ const MainBlog = () => {
         { name: 'fdslkfld', age: 12 },
     ]
     return (
-        <div>
-            <h2>this is main blog</h2>
+        <>
+
             <div className='d-flex justify-content-center'>
                 <div className="row w-75">
                     {
@@ -42,7 +42,7 @@ const MainBlog = () => {
 
                     </div>
                 </div>   </div>
-        </div>
+        </>
     );
 };
 
