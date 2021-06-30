@@ -1,10 +1,11 @@
 import React from "react";
-
+import "./Footer.css";
 const Footer = () => {
   return (
-    <div>
+    <div className="footer-container">
       <div className="row">
-        <div className="col-md-3">
+        <div className="col-md-3 offset-md-1">
+          <h2>Medcity</h2>
           <p>
             Our goal is to deliver quality of care in a courteous, respectful,
             and compassionate manner. We hope you will allow us to care for you
@@ -13,7 +14,7 @@ const Footer = () => {
           </p>
           <p>Make Appointment</p>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-2">
           <p>Departments</p>
           Neurology Clinic
           <p>Cardiology Clinic</p>
@@ -22,7 +23,7 @@ const Footer = () => {
           <p>Pediatric Clinic</p>
           <p>Cardiac Clinic</p>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-2">
           <p> Links</p>
           <p>About Us</p>
           <p>Our CLinic</p>
@@ -30,8 +31,8 @@ const Footer = () => {
           <p>News & Media</p>
           <p>Appointments</p>
         </div>
-        <div className="col-md-3">
-          <div class="card" style={{ width: "18rem" }}>
+        <div className="col-md-4">
+          <div id="footer-card" class="card" style={{ width: "24rem" }}>
             <div class="card-body">
               <h5 class="card-title">Quick Contacts</h5>
               <h6 class="card-subtitle mb-2 text-muted">
