@@ -5,7 +5,6 @@ import TopBanner from '../TopBanner/TopBanner';
 const MainAppointment = () => {
     return (
         <>
-
             <Doctors />
             <TopBanner></TopBanner>
             <AppontmentForm></AppontmentForm>
