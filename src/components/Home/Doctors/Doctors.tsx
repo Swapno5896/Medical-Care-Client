@@ -10,7 +10,7 @@ const Doctors = () => {
             img: img1, name: 'Kiano Barker', speciality: 'Pathologist', discription: `Barker help care for patients every day by providing their doctors with the
         information needed to ensure appropriate care. He also valuable resources for other physicians.`},
         {
-            img: img1, name: 'Dermatologists', speciality: `Cardiology Specialist',discription:'Brian specializes in treating skin, hair, nail, and mucous membrane. He also
+            img: img1, name: 'Dermatologists', speciality: `Cardiology Specialist`, discription: `Brian specializes in treating skin, hair, nail, and mucous membrane. He also
         address cosmetic issues, helping to revitalize the appearance of the skin`},
     ]
     return (

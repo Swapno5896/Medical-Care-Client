@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container-fluid">
           <button
             class="navbar-toggler"
@@ -20,7 +20,7 @@ const Header = () => {
             <a class="navbar-brand" href="#">
               Hidden brand
             </a>
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-4 mb-lg-0">
               <li class="nav-item pe-4">
                 <Link className="nav-link" to="/">
                   Home
@@ -28,7 +28,7 @@ const Header = () => {
               </li>
               <li class="nav-item pe-4">
                 <Link className="nav-link" to="/blog">
-                  Blog
+                  Artical
                 </Link>
               </li>
               <li class="nav-item pe-4">

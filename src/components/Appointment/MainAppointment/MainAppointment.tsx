@@ -1,13 +1,13 @@
 import React from 'react';
 import Doctors from '../../Home/Doctors/Doctors'
-import AppontmentForm from '../AppontmentForm/AppontmentForm';
+import Appontment from '../Appontment/Appontment';
 import TopBanner from '../TopBanner/TopBanner';
 const MainAppointment = () => {
     return (
         <>
             <Doctors />
             <TopBanner></TopBanner>
-            <AppontmentForm></AppontmentForm>
+            <Appontment></Appontment>
         </>
     );
 };

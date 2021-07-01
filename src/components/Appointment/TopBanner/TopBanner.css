@@ -1,0 +1,14 @@
+.topBanner-container {
+  height: 650px;
+  color: rgb(19, 18, 18);
+  overflow: hidden;
+  position: relative;
+}
+
+.benefit-gb-img {
+  position: absolute;
+  opacity: 0.4;
+  top: 2px;
+  width: 100%;
+  height: auto;
+}
