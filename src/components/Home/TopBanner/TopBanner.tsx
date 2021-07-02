@@ -1,5 +1,5 @@
 import React from 'react';
-import './TopBanner.scss'
+import './TopBanner.css'
 import img1 from '../../../images/c-1.jpg'
 import img2 from '../../../images/c-2.png'
 import img3 from '../../../images/c-3.png'

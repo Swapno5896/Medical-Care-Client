@@ -1,12 +1,13 @@
 import React from 'react';
+import './SmallDetail.css'
 import img1 from '../../../images/c-2.png'
 const SmallDetail = () => {
     return (
         <div className='d-flex justify-content-center'>
             <div className='w-75'>
                 <div className="card-group ">
-                    <div className="card ">
-                        <h5 className="card-title">
+                    <div className="card small-detail-card cart-1">
+                        <h5 className="card-title text-center">
                             Emergency Cases</h5>
                         <div className="card-body">
 
@@ -14,16 +15,16 @@ const SmallDetail = () => {
                             <p className="card-text">01061245741</p>
                         </div>
                     </div>
-                    <div className="card">
-                        <h5 className="card-title">Doctors Timetable</h5>
+                    <div className="card cart-2  small-detail-card">
+                        <h5 className="card-title  text-center">Doctors Timetable</h5>
                         <div className="card-body">
 
                             <p className="card-text">Qualified doctors available six days a week, view our timetable to make an appointment.</p>
 
                         </div>
                     </div>
-                    <div className="card">
-                        <h5 className="card-title">
+                    <div className="card cart-3">
+                        <h5 className="card-title text-center  small-detail-card">
                             Opening Hours</h5>
                         <div className="card-body">
 

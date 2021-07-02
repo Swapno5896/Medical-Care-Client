@@ -1,0 +1,15 @@
+.appontment-input {
+  border-radius: 10px;
+}
+.input-container {
+  padding: 41px 32px;
+  border-radius: 32px;
+}
+.book-appointment-btn {
+  border-radius: 20px;
+  width: 60%;
+  color: white;
+  font-size: 24px;
+  background-color: rgb(58, 56, 56);
+  margin: 6px auto;
+}

@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./BookingHomeCard.css";
 const BookingHomeCard = () => {
   return (
-    <div className="col-md-6">
+    <div className="col-md-6 appointment-side-container">
       <h2 className="text-center">
         Helping Patients From <br /> Around The Globe
       </h2>

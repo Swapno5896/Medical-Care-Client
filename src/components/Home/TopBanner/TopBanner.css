@@ -1,0 +1,14 @@
+.top-banner-carosel {
+  height: 600px;
+}
+
+.top-banner-carosel .img {
+  width: 100%;
+}
+.top-banner-icons {
+  display: flex;
+}
+
+.top-banner-icons p {
+  padding: 0px 10px;
+}

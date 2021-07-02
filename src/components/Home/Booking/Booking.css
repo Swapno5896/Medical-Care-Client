@@ -1,8 +1,10 @@
 .booking-container {
   background-color: aqua;
-  padding: 58px 90px;
+  padding: 73px 110px;
+  margin: 118px 25px;
 }
 .booking-content {
+  padding-top: 40px;
   background-color: azure;
-  padding-bottom: 30px;
+  padding-bottom: 71px;
 }
