@@ -1,6 +1,13 @@
 import React from "react";
-
-const DoctorsCard = (props) => {
+interface Iprops {
+  doctor: {
+    img: string;
+    name: string;
+    speciality: string;
+    discription: string
+  }
+}
+const DoctorsCard: React.FC<Iprops> = (props) => {
   const { img, name, speciality, discription } = props.doctor;
   return (
     <div className="card pe-4">
