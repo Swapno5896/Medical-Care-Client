@@ -14,7 +14,7 @@ const ContactForm = () => {
                             className="form-group row offset-md-3 input-container"
                         >
                             <div className="col-sm-12 col-md-6">
-                                <label> Name</label>
+                                <label> Name : </label>
                                 <input
                                     className="form-control appontment-input"
                                     id="ex1"
@@ -23,7 +23,7 @@ const ContactForm = () => {
                                 />
                             </div>
                             <div className="col-sm-12 col-md-6">
-                                <label> Email</label>
+                                <label> Email : </label>
                                 <input
                                     className="form-control appontment-input"
                                     id="ex2"
@@ -32,7 +32,7 @@ const ContactForm = () => {
                                 />
                             </div>
                             <div className="col-sm-12 col-md-6">
-                                <label> Phone</label>
+                                <label> Phone : </label>
                                 <input
                                     className="form-control appontment-input"
                                     id="ex2"
@@ -41,7 +41,7 @@ const ContactForm = () => {
                                 />
                             </div>
                             <div className="col-sm-12 col-md-6">
-                                <label>Sub</label>
+                                <label>Sub : </label>
                                 <input
                                     className="form-control appontment-input"
                                     id="ex2"
@@ -52,13 +52,13 @@ const ContactForm = () => {
                             </div>
 
                             <div className="col-sm-12 col-md-6">
-                                <label>Choose Date </label>
-                                <textarea placeholder='Plase write  your message' className='appontment-inpu' name="" id="" cols={30} rows={10}></textarea>
+                                <label>Choose Date :  </label>
+                                <textarea className='contact-text-area' placeholder='Plase write  your message' name="" id="" cols={30} rows={10}></textarea>
                             </div>
                             <button className="book-appointment-btn">Submit Request </button>
                         </div>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6 quick-contact-section">
                         <QuickContact />
                     </div>
                 </div>
