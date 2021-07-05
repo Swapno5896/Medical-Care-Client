@@ -3,8 +3,19 @@ import BlogCarrd from './../BlogCarrd/BlogCarrd';
 import BlogComments from './../BlogComments/BlogComments';
 import SideBlogs from './../SideBlogs/SideBlogs';
 import DetailBlog from '../DetailBlog/DetailBlog'
+import { connect } from 'react-redux';
+import { Deposit, Withdraw } from '../../../redux/action-creators/action-creators'
+const mapStateToProps = (state: any) => {
+    return {
+        money: state.money
+    }
+}
+const mapDispatchToProps = {
+    Deposit, Withdraw
+}
+const MainBlog = (props: any) => {
+    console.log('props from blog', props);
 
-const MainBlog = () => {
     const fakeBlog = [
         { name: 'fdslkfld', age: 12 },
         { name: 'fdslkfld', age: 12 },
@@ -20,8 +31,10 @@ const MainBlog = () => {
         { name: 'fdslkfld', age: 12 },
     ]
     return (
-        <>
-
+        <div style={{ marginTop: '50px' }}>
+            <h2>We have {props.money?.money} Tk</h2>
+            <button onClick={() => props.Deposit(1)}>Increment</button>
+            <button onClick={() => props.Withdraw(1)}>Decrement</button>
             <div className='d-flex justify-content-center'>
                 <div className="row w-75">
                     {
@@ -42,8 +55,8 @@ const MainBlog = () => {
 
                     </div>
                 </div>   </div>
-        </>
+        </div>
     );
 };
 
-export default MainBlog;
+export default connect(mapStateToProps, mapDispatchToProps)(MainBlog);
