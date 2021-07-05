@@ -3,7 +3,7 @@ import { Types } from "../types/types";
 import { combineReducers } from 'redux'
 
 const initalMoneStae = { money: 2 };
-const initalBlogStae = { blog: '' }
+const initalBlogStae = { blog: [],isLoading:true }
 
 const moneyReducer = (state = initalMoneStae, action: Action) => {
     switch (action.type) {
@@ -26,8 +26,15 @@ const moneyReducer = (state = initalMoneStae, action: Action) => {
 // export default moneyReducer;
 const blogReducer = (state = initalBlogStae, action: Action) => {
     switch (action.type) {
-
-
+        case Types.LOAD_BLOG :
+            return {
+                ...state, blog : action.payload
+                }
+         case Types.LOADING :
+            return {
+                        ...state, isLoading : action.payload
+                 }
+        
         default:
             return state
     }

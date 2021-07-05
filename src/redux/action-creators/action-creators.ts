@@ -13,3 +13,24 @@ export const Withdraw = (amount: number) => {
         payload: amount
     }
 }
+
+export const LoadBlog = (Blogs: any) => {
+    return {
+        type: Types.LOAD_BLOG,
+        payload: Blogs
+    }
+}
+export const LoadBlogAsync = (Blogs: any) => {
+    return {
+        type: Types.LOAD_BLOG_ASUNC,
+    
+    }
+}
+
+
+export const Loading = (isLoading: boolean) => {
+    return {
+        type: Types.LOADING,
+        payload: isLoading
+    }
+}
