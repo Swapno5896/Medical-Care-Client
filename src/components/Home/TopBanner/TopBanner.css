@@ -24,9 +24,16 @@
   position: absolute;
   width: 100%;
   top: 2px;
-  opacity: 0.4;
+  opacity: 0.6;
   height: auto;
 }
 .top-banner-content {
   padding-top: 100px;
+}
+.top-banner-text h1 {
+  font-size: 50px;
+}
+
+.top-banner-text p {
+  font-size: 20px;
 }

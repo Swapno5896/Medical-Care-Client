@@ -6,12 +6,12 @@ import ContactStory from '../ContactStory/ContactStory';
 
 const MainContact = () => {
     return (
-        <div>
+        <>
             <ContactMap />
             <ContactForm></ContactForm>
             <ContactStory></ContactStory>
             <ContactSlider></ContactSlider>
-        </div>
+        </>
     );
 };
 

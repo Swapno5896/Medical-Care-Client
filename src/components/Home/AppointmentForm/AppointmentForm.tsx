@@ -8,7 +8,7 @@ const AppointmentForm = () => {
         className="form-group row offset-md-3 input-container"
       >
         <div className="col-sm-12 col-md-6">
-          <label>Choose Clinic</label>
+          <label>Choose Clinic : </label>
           <input
             className="form-control appontment-input"
             id="ex1"
@@ -16,7 +16,7 @@ const AppointmentForm = () => {
           />
         </div>
         <div className="col-sm-12 col-md-6">
-          <label>Choose Doctor</label>
+          <label>Choose Doctor : </label>
           <input
             className="form-control appontment-input"
             id="ex2"
@@ -24,7 +24,7 @@ const AppointmentForm = () => {
           />
         </div>
         <div className="col-sm-12 col-md-4">
-          <label> Name</label>
+          <label> Name : </label>
           <input
             className="form-control appontment-input"
             id="ex2"
@@ -32,7 +32,7 @@ const AppointmentForm = () => {
           />
         </div>
         <div className="col-sm-12 col-md-4">
-          <label>Email</label>
+          <label>Email : </label>
           <input
             className="form-control appontment-input"
             id="ex2"
@@ -40,7 +40,7 @@ const AppointmentForm = () => {
           />
         </div>
         <div className="col-sm-12 col-md-4">
-          <label>Number :</label>
+          <label>Number : </label>
           <input
             className="form-control appontment-input"
             id="ex2"
@@ -48,7 +48,7 @@ const AppointmentForm = () => {
           />
         </div>
         <div className="col-sm-12 col-md-6">
-          <label>Choose Date </label>
+          <label>Choose Date : </label>
           <input
             className="form-control appontment-input"
             id="ex2"

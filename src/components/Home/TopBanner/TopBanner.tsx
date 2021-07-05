@@ -23,7 +23,7 @@ const TopBanner = () => {
                             <div className="col-md-4 offset-md-2 top-banner-content ">
 
 
-                                <div >
+                                <div className='top-banner-text' >
 
                                     <h1>Provide best <br /> Medical care care</h1>
                                     <p>The health and well-being of our patients and their health care team will
