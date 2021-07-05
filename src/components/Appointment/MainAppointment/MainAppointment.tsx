@@ -4,11 +4,13 @@ import Appontment from '../Appontment/Appontment';
 import TopBanner from '../TopBanner/TopBanner';
 const MainAppointment = () => {
     return (
-        <>
+     <div style={{marginTop:'53px'}}>
+<TopBanner></TopBanner>
             <Doctors />
-            <TopBanner></TopBanner>
             <Appontment></Appontment>
-        </>
+        </div>
+           
+    
     );
 };
 
