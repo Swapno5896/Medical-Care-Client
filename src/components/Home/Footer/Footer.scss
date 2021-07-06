@@ -1,6 +1,7 @@
+@import '../../../Styled/Colors';
 .footer-container {
-  background-color: #1d2a4d;
-  color: white;
+  background-color: $extraDark;
+  color: $white;
   padding: 82px 20px;
   margin-top: 120px;
 }
