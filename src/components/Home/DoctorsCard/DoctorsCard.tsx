@@ -10,8 +10,8 @@ interface Iprops {
 const DoctorsCard: React.FC<Iprops> = (props) => {
   const { img, name, speciality, discription } = props.doctor;
   return (
-    <div className="card pe-4">
-      <img src={img} className="card-img-top" alt="..." />
+    <div className="card pe-4 m-3 ">
+      <img src={img} className="Responsive image p-2" alt="..." />
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
         <p className="card-text">{speciality}</p>
