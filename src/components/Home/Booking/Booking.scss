@@ -1,10 +1,11 @@
+@import '../../../Styled/Colors';
 .booking-container {
-  background-color: #84e7e7;
+  background-color: $subPrimary;
   padding: 73px 110px;
   margin: 118px 25px;
 }
 .booking-content {
   padding-top: 40px;
-  background-color: azure;
+  background-color:$subWhite;
   padding-bottom: 71px;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import AppointmentForm from '../AppointmentForm/AppointmentForm';
 import BookingHomeCard from '../BookingHomeCard/BookingHomeCard';
-import './Booking.css'
+import './Booking.scss'
 const Booking = () => {
     return (<div className='booking-container'>
         <div className='booking-content' >
