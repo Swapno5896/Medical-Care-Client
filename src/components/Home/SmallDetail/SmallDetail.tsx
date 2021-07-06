@@ -1,5 +1,5 @@
 import React from 'react';
-import './SmallDetail.css'
+import './SmallDetail.scss'
 import img1 from '../../../images/c-2.png'
 const SmallDetail = () => {
     return (

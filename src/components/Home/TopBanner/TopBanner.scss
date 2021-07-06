@@ -1,0 +1,41 @@
+ @import '../../../Styled/FontSize'; 
+.top-banner-carosel {
+    height: 600px;
+  }
+  .carosel-icon {
+    font-size: $title;
+  }
+  .top-banner-carosel .img {
+    width: 100%;
+  }
+  .top-banner-icons {
+    display: flex;
+  }
+  
+  .top-banner-icons p {
+    padding: 0px 10px;
+  }
+  
+  .topbanner-container {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+  }
+  .top-banner-bg-img {
+    position: absolute;
+    width: 100%;
+    top: 2px;
+    opacity: 0.6;
+    height: auto;
+  }
+  .top-banner-content {
+    padding-top: 100px;
+  }
+  .top-banner-text h1 {
+    font-size: 50px;
+  }
+  
+  .top-banner-text p {
+    font-size: $subTitile
+  }
+  
