@@ -5,12 +5,11 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import "./AppointmentForm.css";
 const AppointmentForm = () => {
-  const [startDate, setStartDate] = useState(new Date());
   const [appointment, setAppointment] = useState({ name: '', email: '', number: '', date: new Date() });
 
 
   const handleBlue = (e: React.FocusEvent<HTMLInputElement>) => {
-    // console.log(e.target.value);
+
     setAppointment({
       ...appointment, [e.target.name]: e.target.value
     })
