@@ -6,12 +6,18 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./AppointmentForm.css";
 const AppointmentForm = () => {
   const [startDate, setStartDate] = useState(new Date());
-  const [appointment, setAppointment] = useState({ name: '', email: '', number: '' });
+  const [appointment, setAppointment] = useState({ name: '', email: '', number: '', date: new Date() });
+
+
   const handleBlue = (e: React.FocusEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
-    //   setAppointment({
-    //  name : 'df'
-    //   })
+    // console.log(e.target.value);
+    setAppointment({
+      ...appointment, [e.target.name]: e.target.value
+    })
+  }
+  const handleSubmit = () => {
+
+    console.log(appointment);
   }
   return (
     <div className="col-md-6 ">
@@ -80,9 +86,13 @@ const AppointmentForm = () => {
         </div>
         <div className="col-sm-12 col-md-6">
           <label>Choose Date : </label>
-          <DatePicker selected={startDate} onChange={(date: Date) => setStartDate(date)} />
+          <DatePicker selected={appointment.date} onChange={(date: Date) => {
+            setAppointment({
+              ...appointment, date: date
+            })
+          }} />
         </div>
-        <button className="book-appointment-btn">Book Appointment </button>
+        <button onClick={handleSubmit} className="book-appointment-btn">Book Appointment </button>
       </div>
     </div>
   );
