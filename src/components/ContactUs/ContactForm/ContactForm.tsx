@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ContactForm.css'
 import QuickContact from './../../Appointment/QuickContact/QuickContact';
 const ContactForm = () => {
+    const [contactInfo, setContactInfo] = useState({ name: '', email: '', phone: '', sub: '', message: '' });
+    const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+        setContactInfo({
+            ...contactInfo, [e.target.name]: e.target.value
+        })
+    }
+    const handleSubmit = () => {
+        console.log(contactInfo)
+    }
     return (
         <div className='booking-container'>
             <div className='booking-content' >
@@ -16,6 +25,8 @@ const ContactForm = () => {
                             <div className="col-sm-12 col-md-6">
                                 <label> Name : </label>
                                 <input
+                                    onBlur={handleBlur}
+                                    name='name'
                                     className="form-control appontment-input"
                                     id="ex1"
                                     type="text"
@@ -25,6 +36,8 @@ const ContactForm = () => {
                             <div className="col-sm-12 col-md-6">
                                 <label> Email : </label>
                                 <input
+                                    onBlur={handleBlur}
+                                    name='email'
                                     className="form-control appontment-input"
                                     id="ex2"
                                     type="text"
@@ -34,6 +47,8 @@ const ContactForm = () => {
                             <div className="col-sm-12 col-md-6">
                                 <label> Phone : </label>
                                 <input
+                                    onBlur={handleBlur}
+                                    name='phone'
                                     className="form-control appontment-input"
                                     id="ex2"
                                     type="text"
@@ -43,6 +58,8 @@ const ContactForm = () => {
                             <div className="col-sm-12 col-md-6">
                                 <label>Sub : </label>
                                 <input
+                                    onBlur={handleBlur}
+                                    name='sub'
                                     className="form-control appontment-input"
                                     id="ex2"
                                     type="text"
@@ -52,10 +69,10 @@ const ContactForm = () => {
                             </div>
 
                             <div className="col-sm-12 col-md-6">
-                                <label>Choose Date :  </label>
-                                <textarea className='contact-text-area' placeholder='Plase write  your message' name="" id="" cols={30} rows={10}></textarea>
+                                <label>Enter Your Message  :  </label>
+                                <textarea onBlur={e => console.log(e)} ng-model='' name='message' className='contact-text-area' placeholder='Plase write  your message' id="" cols={30} rows={10}></textarea>
                             </div>
-                            <button className="book-appointment-btn">Submit Request </button>
+                            <button onClick={handleSubmit} className="book-appointment-btn">Submit Request </button>
                         </div>
                     </div>
                     <div className="col-md-6 quick-contact-section">

@@ -14,10 +14,17 @@ const AppointmentForm = () => {
       ...appointment, [e.target.name]: e.target.value
     })
   }
+  const handelDropdown = (e: React.FormEvent<HTMLUListElement>) => {
+    console.log(e);
+    e.preventDefault()
+    console.log('so');
+  }
   const handleSubmit = () => {
 
     console.log(appointment);
   }
+
+
   return (
     <div className="col-md-6 ">
       <div
@@ -62,7 +69,7 @@ const AppointmentForm = () => {
               Choose Clinic
             </a>
 
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink" onChange={handelDropdown}>
               <li><a className="dropdown-item" href="#">Dr smeeth</a></li>
               <li><a className="dropdown-item" href="#"> Dr joe</a></li>
               <li><a className="dropdown-item" href="#"> Dr herey</a></li>
