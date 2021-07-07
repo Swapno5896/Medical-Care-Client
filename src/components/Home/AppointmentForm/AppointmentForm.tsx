@@ -20,7 +20,15 @@ const AppointmentForm = () => {
     console.log('so');
   }
   const handleSubmit = () => {
-
+    fetch(`http://localhost:9000/addAppointment`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(appointment)
+    }).then(res => res.json())
+      .then(data => console.log(data))
+      .catch(err => console.log(err))
     console.log(appointment);
   }
 

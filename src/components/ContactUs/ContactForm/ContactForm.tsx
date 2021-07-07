@@ -9,6 +9,15 @@ const ContactForm = () => {
         })
     }
     const handleSubmit = () => {
+        fetch(`http://localhost:9000/addContact`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(contactInfo)
+        }).then(res => res.json())
+            .then(data => console.log(data))
+            .catch(err => console.log(err))
         console.log(contactInfo)
     }
     return (
