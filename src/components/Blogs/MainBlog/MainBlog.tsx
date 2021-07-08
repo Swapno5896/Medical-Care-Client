@@ -49,22 +49,22 @@ const MainBlog = (props: any) => {
         },
     ]
 
-    const uploadBlog = () => {
-        fetch('http://localhost:9000/addBlog', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(fakeBlogs),
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-    }
+    // const uploadBlog = () => {
+    //     fetch('http://localhost:9000/addBlog', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify(fakeBlogs),
+    //     })
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             console.log('Success:', data);
+    //         })
+    //         .catch((error) => {
+    //             console.error('Error:', error);
+    //         });
+    // }
     const fakeBlog = [
         { name: 'fdslkfld', age: 12 },
         { name: 'fdslkfld', age: 12 },
@@ -100,7 +100,7 @@ const MainBlog = (props: any) => {
             <h2>We have {props.money?.money} Tk</h2>
             <button onClick={() => props.Deposit(1)}>Increment</button>
             <button onClick={() => props.Withdraw(1)}>Decrement</button>
-            <button onClick={uploadBlog}>upload blog</button>
+            {/* <button onClick={uploadBlog}>upload blog</button> */}
 
             <div className='d-flex justify-content-center'>
                 <div className="row w-75">
