@@ -8,13 +8,30 @@ import { Deposit, Withdraw, LoadBlog, LoadBlogAsync } from '../../../redux/actio
 const mapStateToProps = (state: any) => {
     return {
         money: state.money,
-        blog: state.blog
+        blog: state.blog.blog
     }
 }
 const mapDispatchToProps = {
     Deposit, Withdraw, LoadBlogAsync
 }
-const MainBlog = (props: any) => {
+export interface Iblog {
+    _id: string;
+    date: string;
+    discription: string;
+    img: string;
+    title: string;
+}
+interface money {
+    money: number
+}
+interface Iprops {
+    Deposit: (n: number) => {};
+    LoadBlogAsync: () => {};
+    Withdraw: (n: number) => {};
+    blog: Iblog[];
+    money: money;
+}
+const MainBlog: React.FC<Iprops> = (props) => {
     console.log('props from blog', props);
 
     useEffect(() => {
@@ -22,32 +39,32 @@ const MainBlog = (props: any) => {
     }, [])
 
     // we can get blog from api by : http://localhost:9000/getBlog
-    const fakeBlogs = [
-        {
-            img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post15.jpg
-          `, title: 'Refresh Tired Walls', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
-        },
-        {
-            img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-12.jpg
-          `, title: 'Customer Connections', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
-        },
-        {
-            img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-17-800x600.jpg
-          `, title: 'One Call Does It All', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
-        },
-        {
-            img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-7-800x600.jpg
-          `, title: 'Make Moving Easy', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
-        },
-        {
-            img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-8.jpg
-          `, title: 'Refresh Tired Walls', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
-        },
-        {
-            img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-6.jpg
-          `, title: 'Outdoor Space', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
-        },
-    ]
+    // const fakeBlogs = [
+    //     {
+    //         img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post15.jpg
+    //       `, title: 'Refresh Tired Walls', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
+    //     },
+    //     {
+    //         img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-12.jpg
+    //       `, title: 'Customer Connections', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
+    //     },
+    //     {
+    //         img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-17-800x600.jpg
+    //       `, title: 'One Call Does It All', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
+    //     },
+    //     {
+    //         img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-7-800x600.jpg
+    //       `, title: 'Make Moving Easy', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
+    //     },
+    //     {
+    //         img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-8.jpg
+    //       `, title: 'Refresh Tired Walls', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
+    //     },
+    //     {
+    //         img: `https://servicemaster.qodeinteractive.com/wp-content/uploads/2017/03/blog-post-6.jpg
+    //       `, title: 'Outdoor Space', date: ' March 22, 2017', discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsam facere optio laboriosam excepturi ipsum,'
+    //     },
+    // ]
 
     // const uploadBlog = () => {
     //     fetch('http://localhost:9000/addBlog', {
@@ -79,22 +96,22 @@ const MainBlog = (props: any) => {
         { name: 'fdslkfld', age: 12 },
         { name: 'fdslkfld', age: 12 },
     ]
-    if (props.blog?.isLoading == true) {
-        return (
-            <div
-                style={{ height: "700px" }}
-                className="d-flex justify-content-center align-items-center"
-            >
-                <div
-                    style={{ width: "3rem", height: "3rem" }}
-                    className="spinner-border"
-                    role="status"
-                >
-                    <span className="visually-hidden">Loading...</span>
-                </div>
-            </div>
-        )
-    }
+    // if (props.blog?.isLoading == true) {
+    //     return (
+    //         <div
+    //             style={{ height: "700px" }}
+    //             className="d-flex justify-content-center align-items-center"
+    //         >
+    //             <div
+    //                 style={{ width: "3rem", height: "3rem" }}
+    //                 className="spinner-border"
+    //                 role="status"
+    //             >
+    //                 <span className="visually-hidden">Loading...</span>
+    //             </div>
+    //         </div>
+    //     )
+    // }
     return (
         <div style={{ marginTop: '50px' }}>
             <h2>We have {props.money?.money} Tk</h2>
@@ -106,7 +123,7 @@ const MainBlog = (props: any) => {
                 <div className="row w-75">
 
                     {
-                        fakeBlog.map(dt => <BlogCarrd />)
+                        props.blog?.map(dt => <BlogCarrd dt={dt} />)
                     }
                 </div>
             </div>

@@ -20,10 +20,10 @@ export const LoadBlog = (Blogs: any) => {
         payload: Blogs
     }
 }
-export const LoadBlogAsync = (Blogs: any) => {
+export const LoadBlogAsync = () => {
     return {
         type: Types.LOAD_BLOG_ASUNC,
-    
+
     }
 }
 

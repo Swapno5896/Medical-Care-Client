@@ -1,13 +1,18 @@
 import React from 'react';
 import img1 from '../../../images/c-1.jpg'
-const BlogCarrd = () => {
+import { Iblog } from '../MainBlog/MainBlog'
+interface Iprops {
+    dt: Iblog
+}
+const BlogCarrd: React.FC<Iprops> = (props) => {
+    const { date, discription, img, title } = props.dt
     return (
         <div className="col-md-4">
             <div className="card" style={{ width: '22rem' }}>
-                <img src={img1} className="card-img-top" alt="..." />
+                <img src={img} className="card-img-top" alt="..." />
                 <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 className="card-title">{title}</h5>
+                    <p className="card-text">{discription}</p>
                 </div>
                 <ul className="list-group list-group-flush">
                     <button>Read More</button>
@@ -16,6 +21,7 @@ const BlogCarrd = () => {
                     <a href="#" className="card-link">Card link</a>
                     <a href="#" className="card-link">Another link</a>
                 </div> */}
+
             </div>
 
         </div>
