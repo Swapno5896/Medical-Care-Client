@@ -11,6 +11,7 @@ import Header from './components/Home/Header/Header'
 import MainHome from './components/Home/MainHome/MainHome';
 import MainContact from './components/ContactUs/MainContact/MainContact';
 import Footer from './components/Home/Footer/Footer'
+import MainDetailBlog from "./components/Blogs/MainDetailBlog/MainDetailBlog";
 const App = () => {
   return (
     <div>
@@ -20,12 +21,14 @@ const App = () => {
           <Route exact path='/'>
             <MainHome />
           </Route>
-          <Route exact path='/appoinment'>
+          <Route path='/appoinment'>
             <MainAppointment />
           </Route>
           <Route path='/blog'>
+
             <MainBlog></MainBlog>
           </Route>
+
           <Route path='/contact'>
             <MainContact />
           </Route>

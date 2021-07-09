@@ -9,7 +9,7 @@ const ContactForm = () => {
         })
     }
     const handleSubmit = () => {
-        fetch(`http://localhost:9000/addContact`, {
+        fetch(`https://salty-inlet-50152.herokuapp.com/addContact`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -20,7 +20,7 @@ const AppointmentForm = () => {
     console.log('so');
   }
   const handleSubmit = () => {
-    fetch(`http://localhost:9000/addAppointment`, {
+    fetch(`https://salty-inlet-50152.herokuapp.com/addAppointment`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ const AppointmentForm = () => {
     }).then(res => res.json())
       .then(data => console.log(data))
       .catch(err => console.log(err))
-    console.log(appointment);
+
   }
 
 
