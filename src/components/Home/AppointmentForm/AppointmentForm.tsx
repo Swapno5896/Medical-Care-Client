@@ -6,30 +6,26 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./AppointmentForm.css";
 const AppointmentForm = () => {
   const [appointment, setAppointment] = useState({ name: '', email: '', number: '', date: new Date() });
-
-
-  const handleBlue = (e: React.FocusEvent<HTMLInputElement>) => {
+  const [btnDisable, setBtnDisable] = useState(false)
+  const handleBlue = (e: React.FocusEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
 
     setAppointment({
       ...appointment, [e.target.name]: e.target.value
     })
   }
-  const handelDropdown = (e: React.FormEvent<HTMLUListElement>) => {
-    console.log(e);
-    e.preventDefault()
-    console.log('so');
-  }
-  const handleSubmit = () => {
-    fetch(`https://salty-inlet-50152.herokuapp.com/addAppointment`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(appointment)
-    }).then(res => res.json())
-      .then(data => console.log(data))
-      .catch(err => console.log(err))
 
+
+  const handleSubmit = () => {
+    // fetch(`https://salty-inlet-50152.herokuapp.com/addAppointment`, {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(appointment)
+    // }).then(res => res.json())
+    //   .then(data => console.log(data))
+    //   .catch(err => console.log(err))
+    console.log(appointment)
   }
 
 
@@ -72,30 +68,20 @@ const AppointmentForm = () => {
         </div>
         <div className="col-sm-12 col-md-6">
 
-          <div className="dropdown">
-            <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-              Choose Clinic
-            </a>
-
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink" onChange={handelDropdown}>
-              <li><a className="dropdown-item" href="#">Dr smeeth</a></li>
-              <li><a className="dropdown-item" href="#"> Dr joe</a></li>
-              <li><a className="dropdown-item" href="#"> Dr herey</a></li>
-            </ul>
-          </div>
+          <select onChange={handleBlue} name="clinic" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
         </div>
         <div className="col-sm-12 col-md-6">
-          <div className="dropdown">
-            <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-              Choose Doctor
-            </a>
-
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a className="dropdown-item" href="#">Dr smeeth</a></li>
-              <li><a className="dropdown-item" href="#"> Dr joe</a></li>
-              <li><a className="dropdown-item" href="#"> Dr herey</a></li>
-            </ul>
-          </div>
+          <select onChange={handleBlue} name="doctor" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
 
         </div>
         <div className="col-sm-12 col-md-6">
@@ -106,7 +92,12 @@ const AppointmentForm = () => {
             })
           }} />
         </div>
-        <button onClick={handleSubmit} className="book-appointment-btn">Book Appointment </button>
+        <button disabled={btnDisable} onClick={handleSubmit} className="book-appointment-btn">Book Appointment </button>
+        {btnDisable ?
+          (<div className="spinner-border btn-side-spinner" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>) : null
+        }
       </div>
     </div>
   );

@@ -18,3 +18,12 @@ label {
   font-weight: 700;
   padding-bottom: 10px;
 }
+.btn-side-spinner{
+  position:absolute;
+  z-index: 4;
+  margin: 116px 142px;
+  color:#c4627d;
+  width: 5rem;
+   height: 5rem;
+  
+}
